@@ -1,0 +1,39 @@
+aid: microsoft-sentinel
+url: https://raw.githubusercontent.com/api-evangelist/microsoft-sentinel/refs/heads/main/apis.yml
+apis:
+  - aid: microsoft-sentinel:rest-api
+    name: Microsoft Sentinel REST API
+    tags:
+      - Security
+      - SIEM
+      - SOAR
+      - Threat Detection
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://management.azure.com/
+    humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+    properties:
+      - url: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+        type: Documentation
+    description: >-
+      The Microsoft Sentinel REST API provides programmatic access to
+      security incident management, threat intelligence, watchlists,
+      analytics rules, and automation playbooks. Developers can manage
+      incidents, configure data connectors, create custom detection rules,
+      and automate security response workflows through Azure Resource
+      Manager endpoints.
+common:
+  - type: Portal
+    url: https://portal.azure.com/
+  - type: Pricing
+    url: https://azure.microsoft.com/en-us/pricing/details/microsoft-sentinel/
+  - type: Getting Started
+    url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
+  - type: Terms of Service
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+  - type: Privacy Policy
+    url: https://privacy.microsoft.com/en-us/privacystatement
+  - type: Support
+    url: https://support.microsoft.com/
+maintainers:
+  - name: Kin Lane
+    email: kin@apievangelist.com
