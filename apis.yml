@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - Microsoft
   - Security
   - SIEM
   - SOAR
   - Threat Detection
-  - Microsoft
 url: https://raw.githubusercontent.com/api-evangelist/microsoft-sentinel/refs/heads/main/apis.yml
 created: '2024-01-01'
 modified: '2026-03-16'
