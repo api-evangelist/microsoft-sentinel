@@ -33,6 +33,8 @@ apis:
         type: Documentation
       - url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
         type: Getting Started
+      - url: openapi/microsoft-sentinel-openapi.yml
+        type: OpenAPI
     description: >-
       The Microsoft Sentinel REST API provides programmatic access to
       security incident management, threat intelligence, watchlists,
