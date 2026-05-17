@@ -32,7 +32,7 @@ apis:
       - url: https://learn.microsoft.com/en-us/rest/api/securityinsights/
         type: Documentation
       - url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
-        type: Getting Started
+        type: GettingStarted
       - url: openapi/microsoft-sentinel-openapi.yml
         type: OpenAPI
     description: >-
@@ -51,17 +51,17 @@ common:
     url: https://learn.microsoft.com/en-us/azure/sentinel/
   - type: Pricing
     url: https://azure.microsoft.com/en-us/pricing/details/microsoft-sentinel/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
   - type: Authentication
     url: https://learn.microsoft.com/en-us/azure/active-directory/develop/
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.microsoft.com/en-us/legal/terms-of-use
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://privacy.microsoft.com/en-us/privacystatement
   - type: Support
     url: https://support.microsoft.com/
-  - type: Status
+  - type: StatusPage
     url: https://status.azure.com/
 maintainers:
   - FN: Kin Lane
