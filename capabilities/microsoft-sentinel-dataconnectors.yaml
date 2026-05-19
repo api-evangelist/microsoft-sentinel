@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Microsoft Sentinel REST API — DataConnectors
+  description: 'Microsoft Sentinel REST API — DataConnectors. 1 operations. Lead operation: List data connectors. Self-contained
+    Naftiko capability covering one Microsoft Sentinel business surface.'
+  tags:
+  - Microsoft Sentinel
+  - DataConnectors
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    MICROSOFT_SENTINEL_API_KEY: MICROSOFT_SENTINEL_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: microsoft-sentinel-dataconnectors
+    baseUri: https://management.azure.com
+    description: Microsoft Sentinel REST API — DataConnectors business capability. Self-contained, no shared references.
+    resources:
+    - name: subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof
+      path: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/dataConnectors
+      operations:
+      - name: listdataconnectors
+        method: GET
+        description: List data connectors
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.MICROSOFT_SENTINEL_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: microsoft-sentinel-dataconnectors-rest
+    port: 8080
+    description: REST adapter for Microsoft Sentinel REST API — DataConnectors. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft-operationalinsights/workspaces/{workspacename}/providers/microsoft-securityinsights/dataconnectors
+      name: subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsof
+      description: REST surface for subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof.
+      operations:
+      - method: GET
+        name: listdataconnectors
+        description: List data connectors
+        call: microsoft-sentinel-dataconnectors.listdataconnectors
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: microsoft-sentinel-dataconnectors-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Microsoft Sentinel REST API — DataConnectors. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: list-data-connectors
+      description: List data connectors
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: microsoft-sentinel-dataconnectors.listdataconnectors
+      outputParameters:
+      - type: object
+        mapping: $.

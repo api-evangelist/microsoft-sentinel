@@ -1,0 +1,162 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Microsoft Sentinel REST API — Incidents
+  description: 'Microsoft Sentinel REST API — Incidents. 4 operations. Lead operation: List incidents. Self-contained Naftiko
+    capability covering one Microsoft Sentinel business surface.'
+  tags:
+  - Microsoft Sentinel
+  - Incidents
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    MICROSOFT_SENTINEL_API_KEY: MICROSOFT_SENTINEL_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: microsoft-sentinel-incidents
+    baseUri: https://management.azure.com
+    description: Microsoft Sentinel REST API — Incidents business capability. Self-contained, no shared references.
+    resources:
+    - name: subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof
+      path: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/incidents
+      operations:
+      - name: listincidents
+        method: GET
+        description: List incidents
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof
+      path: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/incidents/{incidentId}
+      operations:
+      - name: getincident
+        method: GET
+        description: Get incident
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createorupdateincident
+        method: PUT
+        description: Create or update incident
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deleteincident
+        method: DELETE
+        description: Delete incident
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.MICROSOFT_SENTINEL_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: microsoft-sentinel-incidents-rest
+    port: 8080
+    description: REST adapter for Microsoft Sentinel REST API — Incidents. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft-operationalinsights/workspaces/{workspacename}/providers/microsoft-securityinsights/incidents
+      name: subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsof
+      description: REST surface for subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof.
+      operations:
+      - method: GET
+        name: listincidents
+        description: List incidents
+        call: microsoft-sentinel-incidents.listincidents
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions/{subscriptionid}/resourcegroups/{resourcegroupname}/providers/microsoft-operationalinsights/workspaces/{workspacename}/providers/microsoft-securityinsights/incidents/{incidentid}
+      name: subscriptions-subscriptionid-resourcegroups-resourcegroupname-providers-microsof
+      description: REST surface for subscriptions-subscriptionId-resourceGroups-resourceGroupName-providers-Microsof.
+      operations:
+      - method: GET
+        name: getincident
+        description: Get incident
+        call: microsoft-sentinel-incidents.getincident
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: createorupdateincident
+        description: Create or update incident
+        call: microsoft-sentinel-incidents.createorupdateincident
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteincident
+        description: Delete incident
+        call: microsoft-sentinel-incidents.deleteincident
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: microsoft-sentinel-incidents-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Microsoft Sentinel REST API — Incidents. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-incidents
+      description: List incidents
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: microsoft-sentinel-incidents.listincidents
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-incident
+      description: Get incident
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: microsoft-sentinel-incidents.getincident
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-update-incident
+      description: Create or update incident
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: microsoft-sentinel-incidents.createorupdateincident
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-incident
+      description: Delete incident
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: microsoft-sentinel-incidents.deleteincident
+      outputParameters:
+      - type: object
+        mapping: $.
