@@ -5,7 +5,7 @@ description: >-
   automation, and response (SOAR) solution. It provides REST APIs for managing incidents, analytics rules, threat
   intelligence, and automation playbooks.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Microsoft
   - Security
@@ -24,7 +24,7 @@ apis:
       - SIEM
       - SOAR
       - Threat Detection
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://management.azure.com/
     humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
     properties:
