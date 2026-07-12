@@ -39,6 +39,10 @@ apis:
       watchlists, analytics rules, and automation playbooks. Developers can manage incidents, configure data connectors,
       create custom detection rules, and automate security response workflows through Azure Resource Manager endpoints.
 common:
+  - type: DomainSecurity
+    url: security/microsoft-sentinel-domain-security.yml
+  - type: Authentication
+    url: authentication/microsoft-sentinel-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/Azure
   - type: Portal
@@ -61,6 +65,8 @@ common:
     url: https://support.microsoft.com/
   - type: StatusPage
     url: https://status.azure.com/
+  - url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=MicrosoftSentinelBlog
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
