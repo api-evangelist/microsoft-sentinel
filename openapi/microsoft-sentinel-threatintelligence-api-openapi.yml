@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Sentinel REST AlertRules ThreatIntelligence API
+  description: Minimal OpenAPI definition for the Microsoft Sentinel (Security Insights) REST API covering alert rules, incidents, bookmarks, data connectors, and threat intelligence indicators.
+  version: '2023-02-01'
+  x-generated-from: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://management.azure.com
+  description: Azure Resource Manager
+security:
+- bearerAuth: []
+tags:
+- name: ThreatIntelligence
+paths:
+  ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/threatIntelligence/main/indicators
+  : parameters:
+    - $ref: '#/components/parameters/SubscriptionId'
+    - $ref: '#/components/parameters/ResourceGroupName'
+    - $ref: '#/components/parameters/WorkspaceName'
+    - $ref: '#/components/parameters/ApiVersion'
+    get:
+      tags:
+      - ThreatIntelligence
+      summary: List threat intelligence indicators
+      operationId: listThreatIntelligenceIndicators
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericList'
+components:
+  parameters:
+    WorkspaceName:
+      in: path
+      name: workspaceName
+      required: true
+      schema:
+        type: string
+    ResourceGroupName:
+      in: path
+      name: resourceGroupName
+      required: true
+      schema:
+        type: string
+    ApiVersion:
+      in: query
+      name: api-version
+      required: true
+      schema:
+        type: string
+        default: '2023-02-01'
+    SubscriptionId:
+      in: path
+      name: subscriptionId
+      required: true
+      schema:
+        type: string
+  schemas:
+    GenericObject:
+      type: object
+      additionalProperties: true
+    GenericList:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/GenericObject'
+      additionalProperties: true
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
