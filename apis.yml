@@ -5,7 +5,20 @@ description: >-
   automation, and response (SOAR) solution. It provides REST APIs for managing incidents, analytics rules, threat
   intelligence, and automation playbooks.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-sentinel.png
 tags:
   - Microsoft
   - Security
@@ -17,27 +30,77 @@ created: '2024-01-01'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: microsoft-sentinel:rest-api
-    name: Microsoft Sentinel REST API
-    tags:
-      - Security
-      - SIEM
-      - SOAR
-      - Threat Detection
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://management.azure.com/
-    humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
-    properties:
-      - url: https://learn.microsoft.com/en-us/rest/api/securityinsights/
-        type: Documentation
-      - url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
-        type: GettingStarted
-      - url: openapi/microsoft-sentinel-openapi.yml
-        type: OpenAPI
-    description: >-
-      The Microsoft Sentinel REST API provides programmatic access to security incident management, threat intelligence,
-      watchlists, analytics rules, and automation playbooks. Developers can manage incidents, configure data connectors,
-      create custom detection rules, and automate security response workflows through Azure Resource Manager endpoints.
+- aid: microsoft-sentinel:microsoft-sentinel-alertrules-api
+  name: Microsoft Sentinel AlertRules API
+  description: The AlertRules API from Microsoft Sentinel — 2 operation(s) for alertrules.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  baseURL: https://management.azure.com/
+  tags:
+  - AlertRules
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-sentinel-alertrules-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
+- aid: microsoft-sentinel:microsoft-sentinel-bookmarks-api
+  name: Microsoft Sentinel Bookmarks API
+  description: The Bookmarks API from Microsoft Sentinel — 1 operation(s) for bookmarks.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  baseURL: https://management.azure.com/
+  tags:
+  - Bookmarks
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-sentinel-bookmarks-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
+- aid: microsoft-sentinel:microsoft-sentinel-dataconnectors-api
+  name: Microsoft Sentinel DataConnectors API
+  description: The DataConnectors API from Microsoft Sentinel — 1 operation(s) for dataconnectors.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  baseURL: https://management.azure.com/
+  tags:
+  - DataConnectors
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-sentinel-dataconnectors-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
+- aid: microsoft-sentinel:microsoft-sentinel-incidents-api
+  name: Microsoft Sentinel Incidents API
+  description: The Incidents API from Microsoft Sentinel — 2 operation(s) for incidents.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  baseURL: https://management.azure.com/
+  tags:
+  - Incidents
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-sentinel-incidents-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
+- aid: microsoft-sentinel:microsoft-sentinel-threatintelligence-api
+  name: Microsoft Sentinel ThreatIntelligence API
+  description: >-
+    The ThreatIntelligence API from Microsoft Sentinel — 1 operation(s) for threatintelligence.
+  humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  baseURL: https://management.azure.com/
+  tags:
+  - ThreatIntelligence
+  properties:
+  - type: OpenAPI
+    url: openapi/microsoft-sentinel-threatintelligence-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/securityinsights/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
 common:
   - type: AgenticAccess
     url: agentic-access/microsoft-sentinel-agentic-access.yml
