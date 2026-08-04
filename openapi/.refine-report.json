@@ -1,0 +1,22 @@
+{
+  "provider": "microsoft-sentinel",
+  "sources": [
+    "microsoft-sentinel-alertrules-api-openapi.yml",
+    "microsoft-sentinel-bookmarks-api-openapi.yml",
+    "microsoft-sentinel-dataconnectors-api-openapi.yml",
+    "microsoft-sentinel-incidents-api-openapi.yml",
+    "microsoft-sentinel-threatintelligence-api-openapi.yml"
+  ],
+  "outputs": [
+    "microsoft-sentinel-alertrules-api-openapi.yml",
+    "microsoft-sentinel-bookmarks-api-openapi.yml",
+    "microsoft-sentinel-dataconnectors-api-openapi.yml",
+    "microsoft-sentinel-incidents-api-openapi.yml",
+    "microsoft-sentinel-threatintelligence-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
