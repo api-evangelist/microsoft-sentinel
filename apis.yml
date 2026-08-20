@@ -36,6 +36,8 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
   baseURL: https://management.azure.com/
   tags:
+  - Alert Rules
+  tags_raw:
   - AlertRules
   properties:
   - type: OpenAPI
@@ -64,6 +66,8 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
   baseURL: https://management.azure.com/
   tags:
+  - Data Connectors
+  tags_raw:
   - DataConnectors
   properties:
   - type: OpenAPI
@@ -93,6 +97,8 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
   baseURL: https://management.azure.com/
   tags:
+  - Threat Intelligence
+  tags_raw:
   - ThreatIntelligence
   properties:
   - type: OpenAPI
