@@ -5,6 +5,18 @@ description: >-
   automation, and response (SOAR) solution. It provides REST APIs for managing incidents, analytics rules, threat
   intelligence, and automation playbooks.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
@@ -108,6 +120,9 @@ apis:
   - type: GettingStarted
     url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
 common:
+  - type: CapabilityMap
+    url: capabilities/microsoft-sentinel-capability-edges.yml
+    name: Microsoft Sentinel Business Capability Map
   - type: AgenticAccess
     url: agentic-access/microsoft-sentinel-agentic-access.yml
   - type: DomainSecurity
