@@ -48,7 +48,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
   baseURL: https://management.azure.com/
   tags:
-  - Alert Rules
+  - AlertRules
   tags_raw:
   - AlertRules
   properties:
@@ -78,7 +78,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
   baseURL: https://management.azure.com/
   tags:
-  - Data Connectors
+  - DataConnectors
   tags_raw:
   - DataConnectors
   properties:
@@ -109,7 +109,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/securityinsights/
   baseURL: https://management.azure.com/
   tags:
-  - Threat Intelligence
+  - ThreatIntelligence
   tags_raw:
   - ThreatIntelligence
   properties:
