@@ -38,7 +38,7 @@ tags:
   - SIEM
   - SOAR
   - Threat Detection
-url: https://raw.githubusercontent.com/api-evangelist/microsoft-sentinel/refs/heads/main/apis.yml
+url: https://azure.microsoft.com/en-us/products/microsoft-sentinel/
 created: '2024-01-01'
 modified: '2026-05-19'
 specificationVersion: '0.23'
