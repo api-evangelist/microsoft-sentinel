@@ -15,7 +15,8 @@ capability_model:
 edge_count: 3
 edges:
 - tag: AlertRules
-  spec_file: microsoft-sentinel-alertrules-api-openapi.yml
+  spec_file: microsoft-sentinel-alert-rules-api-openapi.yml
+  reanchored_from: microsoft-sentinel-alertrules-api-openapi.yml
   capability_id: BC-620.30
   capability_id_l1: BC-620
   capability_name: Threat Detection & Response Management
@@ -35,7 +36,8 @@ edges:
   reason: Security incidents in a SIEM/SOAR are SOC incident response, not IT service desk incidents nor
     HSE incidents.
 - tag: ThreatIntelligence
-  spec_file: microsoft-sentinel-threatintelligence-api-openapi.yml
+  spec_file: microsoft-sentinel-threat-intelligence-api-openapi.yml
+  reanchored_from: microsoft-sentinel-threatintelligence-api-openapi.yml
   capability_id: BC-620.30
   capability_id_l1: BC-620
   capability_name: Threat Detection & Response Management
