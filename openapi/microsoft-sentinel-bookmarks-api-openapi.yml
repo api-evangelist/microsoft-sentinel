@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Microsoft Sentinel REST AlertRules Bookmarks API
+  title: Microsoft Sentinel REST Bookmarks API
   description: Minimal OpenAPI definition for the Microsoft Sentinel (Security Insights) REST API covering alert rules, incidents, bookmarks, data connectors, and threat intelligence indicators.
   version: '2023-02-01'
   x-generated-from: https://learn.microsoft.com/en-us/rest/api/securityinsights/
@@ -33,15 +33,21 @@ paths:
                 $ref: '#/components/schemas/GenericList'
 components:
   parameters:
-    SubscriptionId:
+    WorkspaceName:
       in: path
-      name: subscriptionId
+      name: workspaceName
       required: true
       schema:
         type: string
     ResourceGroupName:
       in: path
       name: resourceGroupName
+      required: true
+      schema:
+        type: string
+    SubscriptionId:
+      in: path
+      name: subscriptionId
       required: true
       schema:
         type: string
@@ -52,16 +58,7 @@ components:
       schema:
         type: string
         default: '2023-02-01'
-    WorkspaceName:
-      in: path
-      name: workspaceName
-      required: true
-      schema:
-        type: string
   schemas:
-    GenericObject:
-      type: object
-      additionalProperties: true
     GenericList:
       type: object
       properties:
@@ -69,6 +66,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/GenericObject'
+      additionalProperties: true
+    GenericObject:
+      type: object
       additionalProperties: true
   securitySchemes:
     bearerAuth:

@@ -11,7 +11,7 @@ servers:
 security:
 - bearerAuth: []
 tags:
-- name: AlertRules
+- name: Alert Rules
 paths:
   ? /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/alertRules
   : parameters:
@@ -21,7 +21,7 @@ paths:
     - $ref: '#/components/parameters/ApiVersion'
     get:
       tags:
-      - AlertRules
+      - Alert Rules
       summary: List alert rules
       operationId: listAlertRules
       responses:
@@ -44,7 +44,7 @@ paths:
     - $ref: '#/components/parameters/ApiVersion'
     get:
       tags:
-      - AlertRules
+      - Alert Rules
       summary: Get alert rule
       operationId: getAlertRule
       responses:
@@ -52,7 +52,7 @@ paths:
           description: OK
     put:
       tags:
-      - AlertRules
+      - Alert Rules
       summary: Create or update alert rule
       operationId: createOrUpdateAlertRule
       requestBody:
@@ -68,7 +68,7 @@ paths:
           description: Created
     delete:
       tags:
-      - AlertRules
+      - Alert Rules
       summary: Delete alert rule
       operationId: deleteAlertRule
       responses:
@@ -78,15 +78,21 @@ paths:
           description: No Content
 components:
   parameters:
-    SubscriptionId:
+    WorkspaceName:
       in: path
-      name: subscriptionId
+      name: workspaceName
       required: true
       schema:
         type: string
     ResourceGroupName:
       in: path
       name: resourceGroupName
+      required: true
+      schema:
+        type: string
+    SubscriptionId:
+      in: path
+      name: subscriptionId
       required: true
       schema:
         type: string
@@ -97,16 +103,7 @@ components:
       schema:
         type: string
         default: '2023-02-01'
-    WorkspaceName:
-      in: path
-      name: workspaceName
-      required: true
-      schema:
-        type: string
   schemas:
-    GenericObject:
-      type: object
-      additionalProperties: true
     GenericList:
       type: object
       properties:
@@ -114,6 +111,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/GenericObject'
+      additionalProperties: true
+    GenericObject:
+      type: object
       additionalProperties: true
   securitySchemes:
     bearerAuth:
