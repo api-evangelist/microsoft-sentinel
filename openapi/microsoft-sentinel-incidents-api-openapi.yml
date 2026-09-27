@@ -78,18 +78,6 @@ paths:
           description: No Content
 components:
   parameters:
-    WorkspaceName:
-      in: path
-      name: workspaceName
-      required: true
-      schema:
-        type: string
-    ResourceGroupName:
-      in: path
-      name: resourceGroupName
-      required: true
-      schema:
-        type: string
     SubscriptionId:
       in: path
       name: subscriptionId
@@ -103,7 +91,22 @@ components:
       schema:
         type: string
         default: '2023-02-01'
+    WorkspaceName:
+      in: path
+      name: workspaceName
+      required: true
+      schema:
+        type: string
+    ResourceGroupName:
+      in: path
+      name: resourceGroupName
+      required: true
+      schema:
+        type: string
   schemas:
+    GenericObject:
+      type: object
+      additionalProperties: true
     GenericList:
       type: object
       properties:
@@ -111,9 +114,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/GenericObject'
-      additionalProperties: true
-    GenericObject:
-      type: object
       additionalProperties: true
   securitySchemes:
     bearerAuth:
