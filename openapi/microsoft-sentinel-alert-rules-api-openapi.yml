@@ -77,13 +77,19 @@ paths:
         '204':
           description: No Content
 components:
+  schemas:
+    GenericList:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/GenericObject'
+      additionalProperties: true
+    GenericObject:
+      type: object
+      additionalProperties: true
   parameters:
-    SubscriptionId:
-      in: path
-      name: subscriptionId
-      required: true
-      schema:
-        type: string
     ApiVersion:
       in: query
       name: api-version
@@ -103,18 +109,12 @@ components:
       required: true
       schema:
         type: string
-  schemas:
-    GenericObject:
-      type: object
-      additionalProperties: true
-    GenericList:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/GenericObject'
-      additionalProperties: true
+    SubscriptionId:
+      in: path
+      name: subscriptionId
+      required: true
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http
