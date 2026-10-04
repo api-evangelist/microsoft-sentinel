@@ -32,35 +32,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/GenericList'
 components:
-  schemas:
-    GenericList:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/GenericObject'
-      additionalProperties: true
-    GenericObject:
-      type: object
-      additionalProperties: true
   parameters:
-    ApiVersion:
-      in: query
-      name: api-version
-      required: true
-      schema:
-        type: string
-        default: '2023-02-01'
     WorkspaceName:
       in: path
       name: workspaceName
-      required: true
-      schema:
-        type: string
-    ResourceGroupName:
-      in: path
-      name: resourceGroupName
       required: true
       schema:
         type: string
@@ -70,6 +45,31 @@ components:
       required: true
       schema:
         type: string
+    ApiVersion:
+      in: query
+      name: api-version
+      required: true
+      schema:
+        type: string
+        default: '2023-02-01'
+    ResourceGroupName:
+      in: path
+      name: resourceGroupName
+      required: true
+      schema:
+        type: string
+  schemas:
+    GenericObject:
+      type: object
+      additionalProperties: true
+    GenericList:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/GenericObject'
+      additionalProperties: true
   securitySchemes:
     bearerAuth:
       type: http
