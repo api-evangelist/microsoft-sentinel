@@ -115,6 +115,12 @@ apis:
   - type: GettingStarted
     url: https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard
 common:
+  - type: Plans
+    url: plans/microsoft-sentinel-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/microsoft-sentinel-rate-limits.yml
+  - type: FinOps
+    url: finops/microsoft-sentinel-finops.yml
   - type: CapabilityMap
     url: capabilities/microsoft-sentinel-capability-edges.yml
     name: Microsoft Sentinel Business Capability Map
