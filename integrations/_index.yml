@@ -1345,6 +1345,7 @@
   arazzo: null
 - slug: microsoft-sentinel-xdome-customer-support
   label: xDome Customer Support
+  partner: claroty
   partner_name: xDome Customer Support
   category: Security - Threat Intelligence
   type: marketplace
@@ -1394,6 +1395,7 @@
   arazzo: null
 - slug: microsoft-sentinel-cofense-support
   label: Cofense Support
+  partner: phishme
   partner_name: Cofense Support
   category: Security - Threat Intelligence
   type: marketplace
@@ -1492,6 +1494,7 @@
   arazzo: null
 - slug: microsoft-sentinel-contrast-protect
   label: Contrast Protect
+  partner: contrast-security
   partner_name: Contrast Protect
   category: Security - Threat Protection
   type: marketplace
@@ -1592,6 +1595,7 @@
   arazzo: null
 - slug: microsoft-sentinel-idira-support
   label: Idira Support
+  partner: cyberark
   partner_name: Idira Support
   category: Security - Threat Intelligence
   type: marketplace
@@ -2629,6 +2633,7 @@
   arazzo: null
 - slug: microsoft-sentinel-google
   label: Google
+  partner: virustotal
   partner_name: Google
   category: Security - Threat Intelligence
   type: marketplace
@@ -2893,6 +2898,7 @@
   arazzo: null
 - slug: microsoft-sentinel-ipqs-plugins-team
   label: IPQS Plugins Team
+  partner: ipqualityscore
   partner_name: IPQS Plugins Team
   category: Security - Threat Intelligence
   type: marketplace
@@ -4366,6 +4372,7 @@
   arazzo: null
 - slug: microsoft-sentinel-rsa-support-team
   label: RSA Support Team
+  partner: rsa-com
   partner_name: RSA Support Team
   category: Identity
   type: marketplace
@@ -4514,6 +4521,7 @@
   arazzo: null
 - slug: microsoft-sentinel-derdack
   label: Derdack
+  partner: signl4
   partner_name: Derdack
   category: DevOps
   type: marketplace
@@ -5624,6 +5632,7 @@
   arazzo: null
 - slug: microsoft-sentinel-vectra-ai
   label: Vectra AI
+  partner: vectranetworks
   partner_name: Vectra AI
   category: Security - Network
   type: marketplace
@@ -5636,6 +5645,7 @@
   arazzo: null
 - slug: microsoft-sentinel-vectra-support
   label: Vectra Support
+  partner: vectranetworks
   partner_name: Vectra Support
   category: Security - Network
   type: marketplace

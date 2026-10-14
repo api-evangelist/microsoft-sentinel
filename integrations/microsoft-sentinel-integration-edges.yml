@@ -2005,9 +2005,9 @@ edges:
   - support-tier:microsoft
 - partner_name: xDome Customer Support
   app: Claroty xDome
-  partner: null
-  partner_match: null
-  partner_candidate: claroty
+  partner: claroty
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -2090,9 +2090,9 @@ edges:
   - support-tier:partner
 - partner_name: Cofense Support
   app: CofenseIntelligence
-  partner: null
-  partner_match: null
-  partner_candidate: phishme
+  partner: phishme
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -2107,9 +2107,9 @@ edges:
   - support-tier:partner
 - partner_name: Cofense Support
   app: CofenseTriage
-  partner: null
-  partner_match: null
-  partner_candidate: phishme
+  partner: phishme
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -2243,9 +2243,9 @@ edges:
   - support-tier:partner
 - partner_name: Contrast Protect
   app: Contrast Protect
-  partner: null
-  partner_match: null
-  partner_candidate: contrast-security
+  partner: contrast-security
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -2379,9 +2379,9 @@ edges:
   - support-tier:partner
 - partner_name: Idira Support
   app: CyberArkAudit
-  partner: null
-  partner_match: null
-  partner_candidate: cyberark
+  partner: cyberark
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -4096,9 +4096,9 @@ edges:
   - support-tier:microsoft
 - partner_name: Google
   app: Google Threat Intelligence
-  partner: null
-  partner_match: null
-  partner_candidate: virustotal
+  partner: virustotal
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -4487,9 +4487,9 @@ edges:
   - support-tier:partner
 - partner_name: IPQS Plugins Team
   app: IPQualityScore
-  partner: null
-  partner_match: null
-  partner_candidate: ipqualityscore
+  partner: ipqualityscore
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -6884,9 +6884,9 @@ edges:
   - support-tier:microsoft
 - partner_name: RSA Support Team
   app: RSAIDPlus_AdminLogs_Connector
-  partner: null
-  partner_match: null
-  partner_candidate: rsa-com
+  partner: rsa-com
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -7139,9 +7139,9 @@ edges:
   - support-tier:partner
 - partner_name: Derdack
   app: SIGNL4
-  partner: null
-  partner_match: null
-  partner_candidate: signl4
+  partner: signl4
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -8956,9 +8956,9 @@ edges:
   - support-tier:partner
 - partner_name: Vectra AI
   app: Vectra AI Detect
-  partner: null
-  partner_match: null
-  partner_candidate: vectranetworks
+  partner: vectranetworks
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -8973,9 +8973,9 @@ edges:
   - support-tier:partner
 - partner_name: Vectra AI
   app: Vectra AI Stream
-  partner: null
-  partner_match: null
-  partner_candidate: vectranetworks
+  partner: vectranetworks
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -8990,9 +8990,9 @@ edges:
   - support-tier:partner
 - partner_name: Vectra Support
   app: Vectra XDR
-  partner: null
-  partner_match: null
-  partner_candidate: vectranetworks
+  partner: vectranetworks
+  partner_match: domain+verified
+  partner_candidate: null
   type: marketplace
   marketplace: own
   channel: partner-built
