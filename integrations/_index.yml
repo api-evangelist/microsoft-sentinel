@@ -65,6 +65,18 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: microsoft-sentinel-any-run
+  label: ANY.RUN
+  partner_name: ANY.RUN
+  category: Security - Threat Protection
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/ANYRUN
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: microsoft-sentinel-argos-cloud-security
   label: ARGOS Cloud Security
   partner_name: ARGOS Cloud Security
@@ -4309,6 +4321,19 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: microsoft-sentinel-pulumi
+  label: Pulumi
+  partner: pulumi
+  partner_name: Pulumi
+  category: Security - Others
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/PulumiCloudAuditLogs
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: microsoft-sentinel-purestoragemarketplaceadmin
   label: purestoragemarketplaceadmin
   partner: pure-storage
@@ -5934,6 +5959,17 @@
   marketplace: own
   channel: partner-built
   evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/XBOW
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: microsoft-sentinel-alex-kefallonitis
+  label: Alex Kefallonitis
+  partner_name: Alex Kefallonitis
+  category: Security - Threat Protection
+  type: marketplace
+  marketplace: own
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/XdrLogRaider
   source: edge
   relationship: platform-app
   status: not-a-workflow

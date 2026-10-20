@@ -9,9 +9,9 @@ marketplace_apps:
   channel: partner-built
   app: microsoft-sentinel
   url: https://learn.microsoft.com/azure/sentinel/sentinel-solutions-catalog
-  app_count: 568
+  app_count: 571
   adapter: sweep-security.py:sentinel-content-hub
-  listed: 568
+  listed: 571
   note: Content Hub solutions from Azure/Azure-Sentinel; tier from SolutionMetadata.json
 edges:
 - partner_name: 1Password
@@ -99,6 +99,23 @@ edges:
   detected: '2026-10-14'
   badges:
   - support-tier:microsoft
+- partner_name: ANY.RUN
+  app: ANYRUN
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/ANYRUN
+  category: Security - Threat Protection
+  partner_domain: any.run
+  detected_by: sweep-security.py
+  detected: '2026-10-19'
+  badges:
+  - support-tier:partner
 - partner_name: ARGOS Cloud Security
   app: ARGOSCloudSecurity
   partner: null
@@ -6797,6 +6814,23 @@ edges:
   detected: '2026-10-14'
   badges:
   - support-tier:microsoft
+- partner_name: Pulumi
+  app: PulumiCloudAuditLogs
+  partner: pulumi
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/PulumiCloudAuditLogs
+  category: Security - Others
+  partner_domain: pulumi.com
+  detected_by: sweep-security.py
+  detected: '2026-10-19'
+  badges:
+  - support-tier:partner
 - partner_name: purestoragemarketplaceadmin
   app: Pure Storage
   partner: pure-storage
@@ -9430,6 +9464,23 @@ edges:
   detected: '2026-10-14'
   badges:
   - support-tier:partner
+- partner_name: Alex Kefallonitis
+  app: XdrLogRaider
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: null
+  relationship: platform-app
+  direction: unknown
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/XdrLogRaider
+  category: Security - Threat Protection
+  partner_domain: null
+  detected_by: sweep-security.py
+  detected: '2026-10-19'
+  badges:
+  - support-tier:community
 - partner_name: ZeroFox
   app: ZeroFox
   partner: null
